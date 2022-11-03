@@ -1,12 +1,15 @@
 package Com.student;
 
 import java.util.ArrayList;
+
 import java.util.Collections;
 import java.util.Iterator;
+import java.util.TreeSet;
+
 
 public class Studentmain { //main class
-
- public static void fillset() //static method to fillarraylist
+	public static ArrayList<Student>st; 
+  public static void fillset() //static method to fillarraylist
 	{
 	 
 	ArrayList <Student> st=new ArrayList<>(); // instanciate Arraylist1
@@ -35,8 +38,8 @@ public class Studentmain { //main class
 		{
 			System.out.println(itr.next()); //sop 
 		}
-		
-		Collections.sort(st, new Idcomparator()); //sort method to sort id,name
+	}
+		/*Collections.sort(st, new Idcomparator()); //sort method to sort id,name
 		
 		System.out.println("\nAfter sorting Student id........ ");
 		itr=st.iterator(); //iterator
@@ -46,7 +49,7 @@ public class Studentmain { //main class
 			System.out.println(itr.next()); //sop
 		}
 		}
-	   
+	   */
 
 	public static void main(String[] args) { //main method
 		fillset(); //call the method
