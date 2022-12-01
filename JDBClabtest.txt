@@ -1,0 +1,34 @@
+ Q) Create Table users : column name ---uname (primary key) , 
+password (not null and minimum length should be 6 and should not contain space)
+
+ANS:
+ create table user(uname varchar(20) not null primary key unique,password varchar(20),check(password <=6));
+
+
+mysql> select * from user;
++-------+----------+
+| uname | password |
++-------+----------+
+| Avani | avanii   |
+| Jiva  | jGe#21   |
+| Lucky | luck@1   |
+| Somya | som1     |
+| Tina  | ti@12.   |
++-------+----------+
+5 rows in set (0.00 sec)
+
+
+
+ Q2) update user set password='So12' where uname='Somya';
+
+mysql> select * from user;
++-------+----------+
+| uname | password |
++-------+----------+
+| Avani | avanii   |
+| Jiva  | jGe#21   |
+| Lucky | luck@1   |
+| Somya | So12     |
+| Tina  | ti@12.   |
++-------+----------+
+5 rows in set (0.00 sec)
