@@ -1,57 +1,17 @@
-package Com.student;
+package LabTestjdbc1.LabTestonStudent.studentdao;
 
-public class Student {  //studnet class
+import LabTestjdbc1.LabTestonStudent.entities.Student1;
 
-	//data members of studnet class
-	private int id;
-	private String name;
-	private String contno;
+public interface Student {
+
+	public boolean insertstudent(Student1 s);
 	
-	public Student() { // generate default constructor
-		super();
-	}
+	public Student1 getstudents(int id);
 	
-	public Student(int id, String name, String contno) {  //generate parameterized constructor
-		super();
-		this.id = id;
-		this.name = name;
-		this.contno = contno;
-	}
-
-	//generate getters and settters
-	public int getId() {  //get id
-		return id;
-	}
-
-	public void setId(int id) { //set id
-		this.id = id;
-	}
-
-	public String getName() { //get name
-		return name;
-	}
-
-	public void setName(String name) { //set name
-		this.name = name;
-	}
-
-	public String getContno() { //get contno
-		return contno;
-	}
-
-	public void setContno(String contno) { // set contno
-		this.contno = contno;
-	}
-
-	@Override
-	public String toString() { //generate tostring method
-		return "Student [id=" + id + ", name=" + name + ", contno=" + contno + "]";
-	}
-
+	public boolean updatestudent(int id);
 	
-	}
+	public boolean deletestudent(int id);
 	
 	
-
-
-
+	
+}

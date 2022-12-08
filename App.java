@@ -1,10 +1,10 @@
-package LabTestjdbc1.JDBCTest1;
+package LabTestjdbc1.LabTestonStudent;
 
-import java.sql.SQLException;
 import java.util.Scanner;
 
-import userdao.Userdaoclass;
-import userdaoimpl.Usermaindao;
+import LabTestjdbc1.LabTestonStudent.daoimpl.Studentdaoimpl;
+import LabTestjdbc1.LabTestonStudent.entities.Student1;
+import LabTestjdbc1.LabTestonStudent.studentdao.Student;
 
 /**
  * Hello world!
@@ -14,82 +14,63 @@ public class App
 {
     public static void main( String[] args )
     {
-        Userdaoclass ud=new Usermaindao();
+    	displaystudent();	
+    }
+    
+    public static void displaystudent()
+    {
+    	Student std=new Studentdaoimpl();
+    	
+    	System.out.println("Press 1. To Create Student:");
+		System.out.println("Press 2. To Retrieve Studnet :");
+		System.out.println("Press 3. To Update Studnet :");
+		System.out.println("Press 4. To Delete Student :");
+		System.out.println("Press 5. To Exit :");
         
-        System.out.println("1. To Create user:");
-		System.out.println("2. To View user:");
-		System.out.println("3. To View all users:");
-		System.out.println("4. To Update user:");
-		System.out.println("5. To Delete user:");
-		System.out.println("9. To Exit:");
+		int id = 0;
+		Student1 s;
+		Scanner scan = new Scanner(System.in);
+		int ch = scan.nextInt();
+		switch (ch) {
 		
-		try
-		{
-			Scanner scan = new Scanner(System.in);
-			System.out.println("Enter Choice :");
-			int ch=scan.nextInt();
-			int i=0;
-			switch (ch) {
-			case 1:{
-				System.out.println("Enter your user name:");
-				String a=scan.next();
+		case 1:
+			s=new Student1();
+			s.setSid(2001);
+			s.setSname("Shivaay");
+			s.setContacts("8563954687");
+			std.insertstudent(s);
+			System.out.println(s);
+			break;
+			
+		case 2:
+			s=new Student1();
+			s.setSid(101);
+			s=std.getstudents(id);
+			System.out.println(s);
+			break;
+			
+		case 3:
+			s=new Student1();
+			s.setSid(400);
+			std.updatestudent(id);
+			System.out.println(s);
+			break;
+			
+		case 4:
+			s=new Student1();
+			s.setSid(400);
+			std.deletestudent(id);
+			System.out.println(s);
+			break;
 
-				System.out.println("Enter your password:");
-				String b=scan.next();
-			
-				i=ud.insertuser(a, b);
-				System.out.println(i + "record inserted...");
-				break;
-			}
-			
-			case 2:{
-				System.out.println("Enter your user name:");
-				String a=scan.next();
-				
-				System.out.println("your password does not contain  any space &not null:");
-				String b=scan.next();
-				
-				ud.displayuser(a, b);
-			    break;
-			}
-			
-			case 3:{
-				System.out.println("display all..");
-				ud.displayuser();
-				break;
-			}
-			
-			case 4:{
-				System.out.println("Enter password whose uname cant be updated:");
-				String a1=scan.next();
-				ud.updateuser(a1);
-				System.out.println(i + "record updated...");
-				break;
-			}
-			
-			case 5:{
-				System.out.println("enter your delete user name which u want:");
-				String str=scan.next();
-				ud.deleteuser(str);
-				System.out.println(i + "record deleted...");
-				break;
-			}
+	   case 5:
+			scan.close();
+			System.exit(0);
+		    break;
 		
-			case 6:
-				System.exit(0);
-				
-			default :
-				System.out.println("Enter valid password...");
+		default :
+			System.out.println("Enter valid choice...");
 
-			}
-				
-			}
-		catch(SQLException sq)
-		{
-			sq.printStackTrace();
-		}
 		
-		
-			
-			}
-}
+    }
+}}
