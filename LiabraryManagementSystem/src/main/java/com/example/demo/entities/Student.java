@@ -42,10 +42,10 @@ public class Student {
 	private String sContact;
 	
 	@Column(name="Student_Email")
-    private String sEmail;
+        private String sEmail;
 	
 	@Column(name="Student_Department")
-    private String sDepartment;
+        private String sDepartment;
 	
 	@ManyToOne
 	@JoinColumn(name = "book_id")
