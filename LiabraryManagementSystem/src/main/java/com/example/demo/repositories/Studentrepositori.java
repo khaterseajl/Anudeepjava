@@ -9,5 +9,6 @@ import com.example.demo.entities.Student;
 @Repository
 public interface Studentrepositori extends JpaRepository<Student, Integer>{
 
+ List<Student>findbyname(String name);
 
 }
