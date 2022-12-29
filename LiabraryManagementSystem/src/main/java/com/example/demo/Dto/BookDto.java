@@ -22,16 +22,14 @@ public class BookDto {
 	int bId;
 	
 	@NotBlank(message=" Book name can't be empty")
-    @NotNull(message="Book Name can't be null")
-	
+        @NotNull(message="Book Name can't be null")
 	String bBookName;
 	
 	@NotBlank(message="Author name can't be empty")
 	@NotNull(message="Author name can't be null")
-	
 	String bAuthorName;
 	
-	@Range(min=10,max=1000 , message="Book price must be in between 10 to 10000")
+	@Range(min=10,max=10000 , message="Book price must be in between 10 to 10000")
 	int bPrice;
 
 }
