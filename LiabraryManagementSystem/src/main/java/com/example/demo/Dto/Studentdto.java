@@ -34,10 +34,10 @@ public class Studentdto {
 	@Size(min=4,max=10,message="Student Name must be in between 4-10 chars")
 	String sName;
 	
-    @NotNull(message="Student Contact couldn't be null")
-    @Pattern(regexp = "\\d{10}$", message = " Invalid phone number ")
-    @Size(max=10 , message="Student Contact size not less than 10")
-    String sContact;
+        @NotNull(message="Student Contact couldn't be null")
+        @Pattern(regexp = "\\d{10}$", message = " Invalid phone number ")
+        @Size(max=10 , message="Student Contact size not less than 10")
+        String sContact;
    
 	@NotBlank(message="Department Name couldn't be empty")
 	@NotNull(message="Department  Name  couldn't be null")
@@ -45,15 +45,12 @@ public class Studentdto {
 	String sDepartment;
 
 	@NotEmpty(message = "Email is required!")
-    @Email(regexp = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}",
+        @Email(regexp = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}",
             flags = Pattern.Flag.CASE_INSENSITIVE,
             message = "Email must be a well-formed email address!")
-     String sEmail;
+         String sEmail;
 	
 	
-	/*@DateTimeFormat(pattern="dd/mm/yyyy")
-	@NotNull(message="Date/Time couldn't be null")
-	Date datetime;
-	*/
+	
 	
 }
