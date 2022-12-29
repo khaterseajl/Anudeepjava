@@ -9,5 +9,5 @@ import com.example.demo.entities.Book;
 @Repository
 public interface Bookrepository extends JpaRepository<Book, Integer>{
 
-
+List<Book>findbyname(String name);
 }
