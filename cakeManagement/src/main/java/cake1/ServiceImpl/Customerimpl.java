@@ -23,7 +23,7 @@ public class Customerimpl implements CustomerService {
 			.crname(cd.getCrName())
 			.crcontact(cd.getCrContact())
 			.crcity(cd.getCrCity())
-			.craddress(cd.getCraddress()).build();
+			.craddress(cd.getCrAddress()).build();
 		return cst.save(cs);
 	}
 
@@ -43,7 +43,7 @@ public class Customerimpl implements CustomerService {
 	public String deleteCustomer(int id) {
 		cst.deleteById(id);
 		
-		return "Record successfully deleted..";
+		return "Customer successfully deleted..";
 	}
 
 	@Override
@@ -54,9 +54,9 @@ public class Customerimpl implements CustomerService {
 				.crname(cd.getCrName())
 				.crcontact(cd.getCrContact())
 				.crcity(cd.getCrCity())
-				.craddress(cd.getCraddress()).build();
+				.craddress(cd.getCrAddress()).build();
 		      cst.save(cs1);
-		return "Record successfully updated..";
+		return "Customer successfully updated..";
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class Customerimpl implements CustomerService {
 	@Override
 	public String deleteAllCustomers() {
 		cst.deleteAll();
-		return "Records successfully deleted..";
+		return "Customers successfully deleted..";
 	}
 
 }
