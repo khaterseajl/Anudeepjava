@@ -15,12 +15,9 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 public class CakeDTO {
-
-	@Range(min=10,max=1000 , message="Cake id must be between 10 to 1000")
-	int ckId;
 	
 	@NotBlank(message="cake name can't be empty")
-    @NotNull(message="Cake Name can't be null")
+        @NotNull(message="Cake Name can't be null")
 	String ckName;
 	
 	@NotBlank(message="Cake flavour can't be empty")
