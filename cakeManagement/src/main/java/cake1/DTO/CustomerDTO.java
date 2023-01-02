@@ -18,19 +18,18 @@ import lombok.NoArgsConstructor;
 @Builder
 public class CustomerDTO {
 
+       @NotBlank(message="Customer Name couldn't be empty")
+       @NotNull(message="Customer Name couldn't be null")
+       String crName;
 	
-	@NotBlank(message="Customer Name couldn't be empty")
-	@NotNull(message="Customer Name couldn't be null")
-	String crName;
-	
-    @NotNull(message="Customer Contact couldn't be null")
-    @Pattern(regexp = "\\d{10}$", message = " Invalid phone number ")
-    @Size(max=10 , message="Customer Contact size not less than 10")
-    String crContact;
+       @NotNull(message="Customer Contact couldn't be null")
+       @Pattern(regexp = "\\d{10}$", message = " Invalid phone number ")
+       @Size(max=10 , message="Customer Contact size not less than 10")
+       String crContact;
    
-    @NotBlank(message="Customer Address couldn't be empty")
-	@NotNull(message="Customer Address couldn't be null") 
-    String craddress;
+       @NotBlank(message="Customer Address couldn't be empty")
+       @NotNull(message="Customer Address couldn't be null") 
+       String crAddress;
     
 	@NotBlank(message="Customer city couldn't be empty")
 	@NotNull(message="Customer city couldn't be null")
