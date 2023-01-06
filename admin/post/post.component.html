@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+
+<title>Registration form</title>
+
+    <link rel ="stylesheet" type="text/css" href="post.component.css">
+</head>
+<body>
+    <div class="container">
+        <form id="contact" action="" method="post">
+            <h1> REGISTRATION FORM</h1>
+       
+        <div class="coloumn "></div>
+        <fieldset>
+            <input type ="text" placeholder=" First name *" name="first name*" required autofocus>
+        </fieldset>
+
+        <fieldset>
+            <input type ="text" placeholder=" Middle  name *" name="middle name*" required autofocus>
+        </fieldset>
+
+        <fieldset>
+            <input type ="text" placeholder=" Last name *" name="last name*" required autofocus>
+        </fieldset>
+
+        <fieldset>
+            <input type ="number" size="2" min="1" max="100" placeholder=" Enter your Age *" name="age*" required autofocus>
+        </fieldset>
+
+        <fieldset>
+            <input type ="email" placeholder=" Enter your Email *" name="email*" required autofocus>
+        </fieldset>
+
+        <fieldset>
+            <input type ="text" placeholder=" Date of Birth *" name="date*" onfocus="(this.type='date')" required autofocus>
+        </fieldset>
+
+        <fieldset>
+            <input type ="text" placeholder=" Phone No *" name="phone no*" required autofocus>
+        </fieldset>
+
+        <fieldset>
+            <p> Enter your gender</p>
+            <div class="radio">
+                <input type="radio " id="Female" name="gender" required>Female<br><br>
+               
+            </div>
+            <div class="radio">
+                <input type="radio " id="Male" name="gender" required>Male<br><br>
+      
+            </div>
+        </fieldset>
+
+        <fieldset>
+
+            <p>Upload file</p>
+            <input type="file" id="file" required>
+
+        </fieldset>
+
+        <fieldset>
+            <button type="submit" id="button">Submit Now</button>
+        </fieldset>
+        </form>
+    </div>
+</body>
